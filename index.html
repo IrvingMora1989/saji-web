@@ -27,6 +27,32 @@ body{margin:0;background:#FBFBF6}
 .mnu-chk{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
 .mnu-btn{display:none;width:48px;height:48px;border-radius:14px;background:#0B3D20;align-items:center;justify-content:center;cursor:pointer}
 section{scroll-margin-top:80px}
+section p{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+.pills{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,200px));justify-content:center;gap:12px;width:100%}
+.pill{display:block;text-align:center;font-size:17px;font-weight:800;padding:11px 14px;border-radius:999px;color:#0B3D20}
+.p-y{background:#F5D90A}.p-w{background:#FBFBF6}.p-o{background:#F08A24}
+.cal-grid{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.foot{background:#062614;color:#A9C7B4}
+.foot-in{max-width:1280px;margin:0 auto;padding:44px 40px 40px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.foot-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.foot-brand img{width:48px;height:48px;border-radius:50%}
+.foot-brand span{font-family:Anton,sans-serif;font-size:22px;color:#FBFBF6;letter-spacing:1px}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;font-size:16px}
+.foot-nav a{color:#CFE3D6;text-decoration:none}
+.foot-nav a:hover{color:#F5D90A}
+.foot-fb{width:46px;height:46px;border-radius:50%;background:#1877F2;display:flex;align-items:center;justify-content:center}
+.foot .foot-copy{margin:0;font-size:14px;color:#A9C7B4;text-align:center}
+@media (max-width:820px){
+.pills{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pill{font-size:15px;padding:11px 6px;white-space:nowrap}
+section[aria-label="Lo que nos distingue"] span[aria-hidden]{display:none}
+section[aria-label="Lo que nos distingue"] div{flex-direction:column;align-items:center;text-align:center}
+.pill:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:calc(50% - 6px)}
+.foot-nav{display:grid;grid-template-columns:repeat(2,auto);gap:14px 32px}
+.foot-brand span{font-size:19px}
+}
+@media (max-width:600px){.cal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 @media (max-width:820px){
 .hdr-in{padding:8px 18px !important}
 .brand img{width:44px;height:44px}
@@ -37,7 +63,7 @@ section{scroll-margin-top:80px}
 .nav a{padding:14px 12px;font-size:18px;border-radius:12px}
 }
 
-@media (max-width:700px){[style*="text-align: justify"]{text-align:left !important}section > div,header > div,footer > div{padding-left:22px !important;padding-right:22px !important}}
+@media (max-width:700px){section > div,header > div,footer > div{padding-left:22px !important;padding-right:22px !important}}
 a{color:#0B3D20}a:hover{color:#12A150}
 .hero{background-image:linear-gradient(90deg,rgba(6,38,20,.95) 0%,rgba(6,38,20,.82) 45%,rgba(6,38,20,.2) 100%),url(portada.jpg);background-size:cover;background-position:center}
 .cierre{background-image:linear-gradient(90deg,rgba(6,38,20,.95) 0%,rgba(6,38,20,.85) 50%,rgba(6,38,20,.35) 100%),url(huerta.jpg);background-size:cover;background-position:center}
@@ -64,18 +90,14 @@ a{color:#0B3D20}a:hover{color:#12A150}
 
 <section id="inicio" class="hero" style="color: #FBFBF6">
 <div style="max-width: 1280px; margin: 0 auto; padding: 110px 40px 120px; display: flex; flex-direction: column; gap: 30px">
-<h1 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(54px, 13vw, 108px); line-height: 0.95; text-transform: uppercase; letter-spacing: 1px">Del campo<br><span style="color: #F5D90A">a tu negocio.</span></h1>
+<h1 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(54px, 13vw, 108px); line-height: 0.95; text-transform: uppercase; letter-spacing: 1px">Del campo<br><span style="color: #F5D90A">a tu negocio</span></h1>
 <p style="margin: 0; font-size: 22px; line-height: 1.5; max-width: 600px; color: #E3EFE6">Productos frescos y soluciones alimentarias para el abastecimiento profesional.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<span style="font-size: 17px; font-weight: 800; padding: 9px 20px; border-radius: 999px; background: #F5D90A; color: #0B3D20">Aguacate</span>
-<span style="font-size: 17px; font-weight: 800; padding: 9px 20px; border-radius: 999px; background: #F5D90A; color: #0B3D20">Limón</span>
-<span style="font-size: 17px; font-weight: 800; padding: 9px 20px; border-radius: 999px; background: #FBFBF6; color: #0B3D20">Pulpa de aguacate</span>
-<span style="font-size: 17px; font-weight: 800; padding: 9px 20px; border-radius: 999px; background: #FBFBF6; color: #0B3D20">Jugos naturales</span>
-<span style="font-size: 17px; font-weight: 800; padding: 9px 20px; border-radius: 999px; background: #F08A24; color: #0B3D20">Otros productos</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px">
-<a href="#contacto" style="background: #F5D90A; color: #0B3D20; text-decoration: none; font-weight: 800; font-size: 18px; padding: 18px 32px; border-radius: 999px">Solicita una cotización</a>
-<a href="#productos" style="background: #12A150; color: #FBFBF6; text-decoration: none; font-weight: 800; font-size: 18px; padding: 18px 32px; border-radius: 999px">Ver productos</a>
+<div class="pills">
+<span class="pill p-y">Aguacate</span>
+<span class="pill p-y">Limón</span>
+<span class="pill p-w">Pulpa de aguacate</span>
+<span class="pill p-w">Jugos naturales</span>
+<span class="pill p-o">Otros productos</span>
 </div>
 </div>
 </section>
@@ -145,7 +167,7 @@ a{color:#0B3D20}a:hover{color:#12A150}
 <div style="padding: 30px 32px 34px">
 <p style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #12A150">Producto fresco · Origen Michoacán</p>
 <h3 style="margin: 8px 0 0; font-family: Anton, sans-serif; font-weight: 400; font-size: 40px; text-transform: uppercase">Aguacate <span style="background: #0B3D20; color: #F5D90A; padding: 0 10px">Hass</span></h3>
-<div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px">
+<div class="cal-grid">
 <div style="background: #0B3D20; border-radius: 14px; padding: 12px 6px; text-align: center"><p style="margin: 0; font-family: Anton, sans-serif; font-size: 19px; color: #F5D90A; text-transform: uppercase">Chico</p><p style="margin: 2px 0 0; font-size: 14px; font-weight: 700; color: #FBFBF6">110–150 g</p></div>
 <div style="background: #0B3D20; border-radius: 14px; padding: 12px 6px; text-align: center"><p style="margin: 0; font-family: Anton, sans-serif; font-size: 19px; color: #F5D90A; text-transform: uppercase">Comercial</p><p style="margin: 2px 0 0; font-size: 14px; font-weight: 700; color: #FBFBF6">150–205 g</p></div>
 <div style="background: #0B3D20; border-radius: 14px; padding: 12px 6px; text-align: center"><p style="margin: 0; font-family: Anton, sans-serif; font-size: 19px; color: #F5D90A; text-transform: uppercase">Extra</p><p style="margin: 2px 0 0; font-size: 14px; font-weight: 700; color: #FBFBF6">205–265 g</p></div>
@@ -228,7 +250,7 @@ a{color:#0B3D20}a:hover{color:#12A150}
 <section id="contacto" class="cierre" style="color: #FBFBF6">
 <div style="max-width: 1280px; margin: 0 auto; padding: 100px 40px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
 <div style="flex: 1 1 480px; min-width: 0">
-<h2 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(46px, 11vw, 84px); line-height: 0.98; text-transform: uppercase">Hablemos de<br><span style="color: #F5D90A">tu suministro.</span></h2>
+<h2 style="margin: 0; font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(46px, 11vw, 84px); line-height: 0.98; text-transform: uppercase">Hablemos de<br><span style="color: #F5D90A">tu suministro</span></h2>
 <p style="margin: 24px 0 0; font-size: 20px; line-height: 1.55; color: #E3EFE6; max-width: 520px">Cuéntanos qué producto, volumen y frecuencia necesitas. Te respondemos con precio y disponibilidad.</p>
 <p style="margin: 24px 0 0; font-size: 18px; font-weight: 700; color: #E3EFE6"><a href="mailto:sajigroupventas@gmail.com" style="color: #E3EFE6">sajigroupventas@gmail.com</a> · Metepec, Estado de México</p>
 </div>
@@ -243,12 +265,12 @@ a{color:#0B3D20}a:hover{color:#12A150}
 </div>
 </section>
 
-<footer style="background: #062614; color: #A9C7B4">
-<div style="max-width: 1280px; margin: 0 auto; padding: 36px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; font-size: 14px">
-<span style="display: flex; align-items: center; gap: 12px"><img src="logo.png" alt="" style="width: 44px; height: 44px; border-radius: 50%"><span style="font-family: Anton, sans-serif; font-size: 20px; color: #FBFBF6; letter-spacing: 1px">SAJI GROUP · Tu socio comercial</span></span>
-<nav aria-label="Pie" style="display: flex; flex-wrap: wrap; gap: 22px"><a href="#nosotros" style="color: #A9C7B4">Nosotros</a><a href="#productos" style="color: #A9C7B4">Productos</a><a href="#operacion" style="color: #A9C7B4">Operación</a><a href="#contacto" style="color: #A9C7B4">Contacto</a><a href="#inicio" style="color: #A9C7B4">Aviso de privacidad</a></nav>
-<a href="https://www.facebook.com/share/1DyWVrv9AN/" aria-label="Síguenos en Facebook" style="width: 44px; height: 44px; border-radius: 50%; background: #1877F2; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg></a>
-<span>© 2022 SAJI GROUP S.A. de C.V.</span>
+<footer class="foot">
+<div class="foot-in">
+<a href="#inicio" class="foot-brand"><img src="logo.png" alt="Logo SAJI GROUP"><span>SAJI GROUP · Tu socio comercial</span></a>
+<nav aria-label="Pie" class="foot-nav"><a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="#operacion">Operación</a><a href="aviso.html">Aviso de privacidad</a></nav>
+<a href="https://www.facebook.com/share/1DyWVrv9AN/" aria-label="Síguenos en Facebook" class="foot-fb"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V9c0-.6.4-1 1-1z"/></svg></a>
+<p class="foot-copy">© 2022 SAJI GROUP S.A. de C.V.</p>
 </div>
 </footer>
 
@@ -265,6 +287,7 @@ document.getElementById('cotiza').addEventListener('submit',function(e){
     'Producto: '+encodeURIComponent(f.producto.value)+'%0A'+
     'Volumen y frecuencia: '+encodeURIComponent(f.volumen.value);
   window.open('https://wa.me/525527284373?text='+t,'_blank');
+  f.reset();
 });
 </script>
 </body>
